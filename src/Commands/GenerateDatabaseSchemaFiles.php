@@ -40,8 +40,12 @@ class GenerateDatabaseSchemaFiles extends Command
      */
     public function handle()
     {
-        $tables = collect(DB::connection()->getDoctrineSchemaManager()->listTableNames());
-    
+        $ignore = config('schema.ignore');
+
+        $tables = collect(DB::connection()->getDoctrineSchemaManager()->listTableNames())->filter(function ($table) use ($ignore) {
+            return (in_array($table, $ignore)) ?  false : true;
+        });
+
         $tables->each(function ($table) {
 
             // Build up the file name
@@ -64,6 +68,8 @@ class GenerateDatabaseSchemaFiles extends Command
 
             File::put($path, $contents);
         });
+
+        $this->info('Schemas generated!');
     }
 
     public function ensureDirectoryExists()

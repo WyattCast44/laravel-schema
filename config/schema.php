@@ -23,4 +23,18 @@ return [
     |
     */
     'extension' => '.schema.json',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ignored Tables
+    |--------------------------------------------------------------------------
+    |
+    | You can declare any tables that you would like to
+    | ignore while generating table schemas
+    |
+    */
+    'ignore' => [
+        //
+    ]
+
 ];
