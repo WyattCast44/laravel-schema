@@ -7,17 +7,17 @@ generate a file named `users.schema.json` that contains the contents below.
 
 ```json
 {
-    "name": "users",
-    "schema": {
-        "id": "bigint",
-        "name": "string",
-        "email": "string",
-        "email_verified_at": "datetime",
-        "password": "string",
-        "remember_token": "string",
-        "created_at": "datetime",
-        "updated_at": "datetime"
-    }
+  "name": "users",
+  "schema": {
+    "id": "bigint",
+    "name": "string",
+    "email": "string",
+    "email_verified_at": "datetime",
+    "password": "string",
+    "remember_token": "string",
+    "created_at": "datetime",
+    "updated_at": "datetime"
+  }
 }
 ```
 
@@ -47,9 +47,10 @@ php artisan vendor:publish --provider="WyattCast44\LaravelSchema\LaravelSchemaSe
 
 Once you have published the config file you can customize:
 
--   where the files will be generated, the default location is in
-    `database\schemas`
--   the file extension, the default is `.schema.json`.
+- where the files will be generated, the default location is in
+  `database\schemas`
+- the file extension, the default is `.schema.json`
+- you add any tables you would like to ignore
 
 ## Why
 
@@ -80,8 +81,8 @@ of using the issue tracker.
 
 ## Credits
 
--   [Wyatt Castaneda][https://github.com/wyattcast44]
--   [All Contributors][link-contributors]
+- [Wyatt Castaneda][https://github.com/wyattcast44]
+- [All Contributors][link-contributors]
 
 ## License
 
