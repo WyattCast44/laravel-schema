@@ -1,0 +1,47 @@
+{
+    "name": "wyattcast44/laravelschema",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "Wyatt",
+            "email": "wyatt@email.com",
+            "homepage": "https://wyattblogs.com"
+        }
+    ],
+    "homepage": "https://github.com/wyattcast44/laravelschema",
+    "keywords": [
+        "Laravel",
+        "LaravelSchema"
+    ],
+    "require": {
+        "illuminate/support": "~5|~6",
+        "doctrine/dbal": "^2.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WyattCast44\\LaravelSchema\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WyattCast44\\LaravelSchema\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WyattCast44\\LaravelSchema\\LaravelSchemaServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSchema": "WyattCast44\\LaravelSchema\\Facades\\LaravelSchema"
+            }
+        }
+    }
+}
