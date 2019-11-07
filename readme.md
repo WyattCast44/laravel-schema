@@ -1,13 +1,6 @@
 # Laravel Schema
 
-This is a simple package to generate schemas of your database tables.
-
-The problem that this package attempts to solve is: when developing a laravel
-application and you want to check the fields in your table, it can be hard to
-determine what fields are actually in the table at the current state, for
-example you may have several migrations that add or remove columns. This package
-will wait to all migrations have ran and then generate a schema based on the
-current state of the database.
+This is a simple package to generate schema files for your database tables.
 
 For an example, the standard `users` table in a new laravel application will
 generate a file named `users.schema.json` that contains the contents below.
@@ -30,24 +23,51 @@ generate a file named `users.schema.json` that contains the contents below.
 
 ## Installation
 
-Via Composer
-
 ```bash
 composer require wyattcast44/laravelschema
 ```
 
 ## Usage
 
+1. Schema files will be regenerated anytime you run migrations
+
+2. You can manually trigger a build by running the command below
+
+```bash
+php artisan schema:generate
+```
+
+## Config
+
+You can publish the config file using the command below
+
+```bash
+php artisan vendor:publish --provider="WyattCast44\LaravelSchema\LaravelSchemaServiceProvider"
+```
+
+Once you have published the config file you can customize:
+
+-   where the files will be generated, the default location is in
+    `database\schemas`
+-   the file extension, the default is `.schema.json`.
+
+## Why
+
+Have you ever needed to know what fields a certain table contains... so you open
+up the create migration for that table? The problem is the more migrations you
+have the better chance that the schema for that table has changed.
+
+You are left with two options, go through every migration file (🤮), or open up
+a database GUI (🙄).
+
+I wanted a quick way to see the current table columns and data-types in my code
+editor, this is how this package was born. I hope you might find it useful as
+well :)
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has
 changed recently.
-
-## Testing
-
-```bash
-$ composer test
-```
 
 ## Contributing
 
@@ -60,23 +80,9 @@ of using the issue tracker.
 
 ## Credits
 
--   [author name][link-author]
+-   [Wyatt Castaneda][https://github.com/wyattcast44]
 -   [All Contributors][link-contributors]
 
 ## License
 
 license. Please see the [license file](license.md) for more information.
-
-[ico-version]:
-    https://img.shields.io/packagist/v/wyattcast44/laravelschema.svg?style=flat-square
-[ico-downloads]:
-    https://img.shields.io/packagist/dt/wyattcast44/laravelschema.svg?style=flat-square
-[ico-travis]:
-    https://img.shields.io/travis/wyattcast44/laravelschema/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
-[link-packagist]: https://packagist.org/packages/wyattcast44/laravelschema
-[link-downloads]: https://packagist.org/packages/wyattcast44/laravelschema
-[link-travis]: https://travis-ci.org/wyattcast44/laravelschema
-[link-styleci]: https://styleci.io/repos/12345678
-[link-author]: https://github.com/wyattcast44
-[link-contributors]: ../../contributors
