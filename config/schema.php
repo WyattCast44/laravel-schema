@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Enable
+    |--------------------------------------------------------------------------
+    |
+    | You can decide to turn off automatic schema file
+    | generation, useful to save time in testing or
+    | disabling entirly in production enviroment
+    |
+    */
+    'auto_generate' => env('AUTOGENERATE_SCHEMA_FILES', false),
+
+    /*
+    |--------------------------------------------------------------------------
     | Output Path
     |--------------------------------------------------------------------------
     |
@@ -34,6 +46,9 @@ return [
     |
     */
     'ignore' => [
+
+        // Default migrations table
+        'migrations',
 
         // Laravel Telescope
         'telescope_entries',
