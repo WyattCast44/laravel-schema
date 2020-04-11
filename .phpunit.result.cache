@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":220:{a:2:{s:7:"defects";a:1:{s:74:"Tests\PackageTests::test_it_generates_schema_files_for_all_database_tables";i:5;}s:5:"times";a:1:{s:74:"Tests\PackageTests::test_it_generates_schema_files_for_all_database_tables";d:0.382;}}}

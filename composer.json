@@ -34,6 +34,9 @@
             "WyattCast44\\LaravelSchema\\Tests\\": "tests"
         }
     },
+    "scripts": {
+        "test": "phpunit"
+    },
     "extra": {
         "laravel": {
             "providers": [

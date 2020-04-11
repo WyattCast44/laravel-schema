@@ -47,6 +47,7 @@ php artisan vendor:publish --provider="WyattCast44\LaravelSchema\LaravelSchemaSe
 
 Once you have published the config file you can customize:
 
+- Whether or not to automatically generate schema files when migrations are ran
 - where the files will be generated, the default location is in
   `database\schemas`
 - the file extension, the default is `.schema.json`

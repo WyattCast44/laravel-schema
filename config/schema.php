@@ -12,7 +12,7 @@ return [
     | disabling entirly in production enviroment
     |
     */
-    'auto_generate' => env('AUTOGENERATE_SCHEMA_FILES', false),
+    'auto_generate' => env('AUTOGENERATE_SCHEMA_FILES', true),
 
     /*
     |--------------------------------------------------------------------------

@@ -21,9 +21,14 @@ class LaravelSchemaServiceProvider extends ServiceProvider
             $this->bootForConsole();
         }
 
-        Event::listen(MigrationsEnded::class, function () {
-            Artisan::call('schema:generate');
-        });
+        $auto_generate = env('AUTOGENERATE_SCHEMA_FILES', config('schema.auto_generate'));
+
+        // Only register listener if autognerate is enabled
+        if ($auto_generate) {
+            Event::listen(MigrationsEnded::class, function () {
+                Artisan::call('schema:generate');
+            });
+        }
     }
 
     /**
