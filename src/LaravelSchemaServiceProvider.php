@@ -33,7 +33,7 @@ class LaravelSchemaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/schema.php', 'schema');
+        $this->mergeConfigFrom(__DIR__ . '/../config/schema.php', 'schema');
 
         // Register the service the package provides.
         $this->app->singleton('laravel-schema', function ($app) {
@@ -50,7 +50,7 @@ class LaravelSchemaServiceProvider extends ServiceProvider
     {
         return ['laravel-schema'];
     }
-    
+
     /**
      * Console-specific booting.
      *
@@ -59,7 +59,7 @@ class LaravelSchemaServiceProvider extends ServiceProvider
     protected function bootForConsole()
     {
         $this->publishes([
-            __DIR__.'/../config/schema.php' => config_path('schema.php'),
+            __DIR__ . '/../config/schema.php' => config_path('schema.php'),
         ], 'schema.config');
 
         $this->commands([

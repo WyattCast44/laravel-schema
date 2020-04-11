@@ -21,7 +21,7 @@ class GenerateDatabaseSchemaFiles extends Command
      *
      * @var string
      */
-    protected $description = 'Generate schema files for all database tables.';
+    protected $description = 'Generate schema files for all non-ignored database tables.';
 
     /**
      * Create a new command instance.
@@ -61,7 +61,7 @@ class GenerateDatabaseSchemaFiles extends Command
                 'name' => $table,
                 'schema' => $rows
             ];
-        
+
             $contents = json_encode($contents, JSON_PRETTY_PRINT);
 
             $this->ensureDirectoryExists();

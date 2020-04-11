@@ -15,7 +15,7 @@
         "LaravelSchema"
     ],
     "require": {
-        "illuminate/support": "~5|~6",
+        "illuminate/support": "~5|~6|~7",
         "doctrine/dbal": "^2.9"
     },
     "require-dev": {
