@@ -2,8 +2,23 @@
 
 namespace Tests;
 
-class AutoGenerateEnabledTest extends BaseTestCase
+use Orchestra\Testbench\TestCase;
+use WyattCast44\LaravelSchema\LaravelSchemaServiceProvider;
+
+class AutoGenerateEnabledTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [LaravelSchemaServiceProvider::class];
+    }
+
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('schema.auto_generate', true);
