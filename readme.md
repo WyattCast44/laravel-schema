@@ -24,7 +24,7 @@ generate a file named `users.schema.json` that contains the contents below.
 ## Installation
 
 ```bash
-composer require wyattcast44/laravelschema
+composer require wyattcast44/laravel-schema
 ```
 
 ## Usage
