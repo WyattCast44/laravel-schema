@@ -13,6 +13,6 @@ class LaravelSchema extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravelschema';
+        return 'laravel-schema';
     }
 }
