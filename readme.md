@@ -93,4 +93,4 @@ of using the issue tracker.
 
 ## License
 
-license. Please see the [license file](license.md) for more information.
+MIT. Please see the [license file](license.md) for more information.
