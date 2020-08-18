@@ -1,5 +1,8 @@
 # Laravel Schema
 
+[![Latest Stable Version](https://poser.pugx.org/wyattcast44/laravelschema/v)](//packagist.org/packages/wyattcast44/laravelschema)
+[![Total Downloads](https://poser.pugx.org/wyattcast44/laravelschema/downloads)](//packagist.org/packages/wyattcast44/laravelschema)
+
 This is a simple package to generate schema files for your database tables.
 
 For an example, the standard `users` table in a new laravel application will
