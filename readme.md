@@ -48,23 +48,24 @@ php artisan vendor:publish --provider="WyattCast44\LaravelSchema\LaravelSchemaSe
 Once you have published the config file you can customize:
 
 - Whether or not to automatically generate schema files when migrations are ran
-- where the files will be generated, the default location is in
-  `database\schemas`
+- where the files will be generated, the default location is in `database\schemas`
 - the file extension, the default is `.schema.json`
 - you add any tables you would like to ignore
 
 ## Why
 
-Have you ever needed to know what fields a certain table contains... so you open
-up the create migration for that table? The problem is the more migrations you
-have the better chance that the schema for that table has changed.
+This package helps you quickly and easily determine what
+field all your database tables have and the datatype for
+those fields. 
 
-You are left with two options, go through every migration file (🤮), or open up
-a database GUI (🙄).
+As a project grows generally the number of migrations 
+does as well, this can make it hard to determine by looking in 
+one place what the final structure of a table is. You could 
+open a database GUI and look there, but I wanted an easier way 
+without leaving my code editor.
 
-I wanted a quick way to see the current table columns and data-types in my code
-editor, this is how this package was born. I hope you might find it useful as
-well :)
+I hope you find this package useful in your workflow, I know
+I use it daily in mine :)
 
 ## Change log
 
