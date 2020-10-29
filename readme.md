@@ -37,7 +37,7 @@ composer require wyattcast44/laravelschema
 2. You can manually trigger a build by running the command below
 
 ```bash
-php artisan schema:generate --dev
+php artisan schema:generate
 ```
 
 ## Config
@@ -92,8 +92,8 @@ of using the issue tracker.
 
 ## Credits
 
-- [Wyatt Castaneda][https://github.com/wyattcast44]
-- [All Contributors][link-contributors]
+- [Wyatt Castaneda](https://github.com/wyattcast44)
+- [All Contributors](https://github.com/WyattCast44/laravel-schema/graphs/contributors)
 
 ## License
 
