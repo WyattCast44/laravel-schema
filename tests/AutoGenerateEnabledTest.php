@@ -19,6 +19,18 @@ class AutoGenerateEnabledTest extends TestCase
         return [LaravelSchemaServiceProvider::class];
     }
 
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return void
+     */
+    protected function defineEnvironment($app)
+    {
+        $app['config']->set('database.default', 'testing');
+    }
+
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('schema.auto_generate', true);
@@ -36,7 +48,7 @@ class AutoGenerateEnabledTest extends TestCase
     public function tearDown(): void
     {
         parent::tearDown();
-        
+
         // Delete any generated files
         array_map('unlink', glob(__DIR__ . '/database/schemas/*.schema.json'));
     }

@@ -19,6 +19,18 @@ class GenerateSchemasCommandTest extends TestCase
         return [LaravelSchemaServiceProvider::class];
     }
 
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return void
+     */
+    protected function defineEnvironment($app)
+    {
+        $app['config']->set('database.default', 'testing');
+    }
+
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('schema.auto_generate', false);

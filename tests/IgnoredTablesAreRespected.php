@@ -14,6 +14,18 @@ class IgnoredTablesAreRespected extends TestCase
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
     }
 
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return void
+     */
+    protected function defineEnvironment($app)
+    {
+        $app['config']->set('database.default', 'testing');
+    }
+
     protected function getPackageProviders($app)
     {
         return [LaravelSchemaServiceProvider::class];

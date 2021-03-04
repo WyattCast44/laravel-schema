@@ -17,3 +17,7 @@ All notable changes to `LaravelSchema` will be documented in this file.
 ## Version 2.1.0
 
 - This releases upgrade the laravel/support and orchestra test-bench packages to work with Laravel 8.
+
+# Version 3
+
+- This realease upgrades the doctrine/dbal to version 3 and drops old laravel versions
